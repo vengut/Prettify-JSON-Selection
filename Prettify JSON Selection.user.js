@@ -18,8 +18,9 @@
   GM_registerMenuCommand("Prettify", prettifyJson);
 
   document.querySelector("body").addEventListener("keydown", (event) => {
+    console.log(event.key);
     // Shift + Alt(Option) + F
-    if (event.shiftKey && event.altKey && event.key === "Ï") {
+    if (event.shiftKey && event.altKey && (event.key === "Ï" || event.key === "F")) {
       prettifyJson();
     }
   });
