@@ -2,7 +2,7 @@
 // @name         Prettify JSON Selection
 // @namespace    vengut.github.io
 // @version      2024-10-10
-// @description  Adds a shortcut(Shift + Alt/Option + F) and context menu option to prettify code selection.
+// @description  Adds a shortcut(Shift + Ctrl/Alt/Option + F) and context menu option to prettify code selection.
 // @license      MIT
 // @author       Venkat G
 // @match        *://*/*
@@ -19,8 +19,8 @@
 
   document.querySelector("body").addEventListener("keydown", (event) => {
     console.log(event.key);
-    // Shift + Alt(Option) + F
-    if (event.shiftKey && event.altKey && (event.key === "Ï" || event.key === "F")) {
+    // Shift + Ctrl/Alt/Option + F
+    if (event.shiftKey && (event.altKey && event.ctrlKey) && (event.key === "Ï" || event.key === "F")) {
       prettifyJson();
     }
   });
